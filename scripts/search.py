@@ -20,7 +20,31 @@ HEADERS = {
 }
 ALLOWED = frozenset("abcdefghijklmnopqrstuvwxyz0123456789+#._-")
 STOPWORDS = frozenset(
-    {"a", "an", "the", "for", "to", "of", "and", "or", "in", "on", "with", "from", "by"}
+    {
+        "a",
+        "an",
+        "the",
+        "for",
+        "to",
+        "of",
+        "and",
+        "or",
+        "in",
+        "on",
+        "with",
+        "from",
+        "by",
+        "free",
+        "like",
+        "similar",
+        "version",
+        "versions",
+        "alternative",
+        "alternatives",
+        "replacement",
+        "replacements",
+        "equivalent",
+    }
 )
 EMPTY_QUERY = {"error": "empty_query", "repos": [], "count": 0}
 RATE_LIMITED = {"error": "rate_limited", "repos": [], "count": 0}

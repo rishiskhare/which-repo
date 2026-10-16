@@ -29,7 +29,11 @@ Run this from the directory that contains `SKILL.md`:
 python3 scripts/search.py --query "distinctive words"
 ```
 
-Pass distinctive words for the use case. The script keeps at most four. A web search may suggest a word for `--query`. The repository list, stars, last push, and URLs in the reply come from the script's JSON.
+Pass words a repository would use to describe the job. The script keeps at most four, and it drops comparison words such as alternative, free, version, like, and replacement. GitHub requires every remaining word to appear, so a brand name plus "alternative" hides the projects that only describe what they do.
+
+When the user wants a free or open-source version of a named product, search the job, not the brand. Screen Studio is a polished screen recorder for demos, so the query is `record screen demo`, not `screen studio alternative`.
+
+A web search may suggest the open project's name. The repository list, stars, last push, and URLs in the reply come from the script's JSON.
 
 Do not fill gaps from memory. Do not rank trends. Do not say a kind of project is missing. Do not clone a repository.
 
@@ -50,7 +54,7 @@ Say that the list order is popularity among the matches that came back. Judge fi
 
 A repository that merely uses the requested technology goes under nearest misses when the user asked for that technology.
 
-If every description is the wrong kind of project, run the script once more. Use words from the user's request or from the first JSON. Stop after that second run. Show the recorded query for each run. Do not add a repository the script did not return. Do not search for a repository name that appeared in neither the request nor the first JSON.
+If the first page is the wrong kind of project, or a web search named a project that is missing from that page, run the script once more. The second query can be that project name, or words from the user's request or the first JSON. Stop after that second run. Show the recorded query for each run. Do not add a repository the script did not return.
 
 ## Reference
 

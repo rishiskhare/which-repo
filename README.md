@@ -2,8 +2,6 @@
 
 Finds live GitHub repositories for a use case.
 
-[![skills.sh](https://skills.sh/b/rishiskhare/which-repo)](https://skills.sh/rishiskhare/which-repo)
-
 ## Install
 
 ```bash

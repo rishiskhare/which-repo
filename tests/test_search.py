@@ -198,6 +198,18 @@ class SearchTests(unittest.TestCase):
         self.assertEqual(payload["count"], 10)
         self.assertEqual(payload["repos"][-1]["full_name"], "octo/repo-9")
 
+    def test_drops_comparison_words(self):
+        transport = Transport([(200, {}, body([repo()]))])
+        code, _raw, transport = self.run_query(
+            ["--query", "free screen studio alternative"],
+            transport,
+        )
+        self.assertEqual(code, 0)
+        words = self.query_text(transport.calls[0][0]).split()
+        self.assertEqual(words[:2], ["screen", "studio"])
+        self.assertNotIn("alternative", words)
+        self.assertNotIn("free", words)
+
     def test_missing_query_exits_1(self):
         def explode(url, headers):
             raise AssertionError("the API was called")

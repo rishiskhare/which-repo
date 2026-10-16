@@ -24,7 +24,7 @@ The date is 18 calendar months before today in UTC. The day is clamped to the la
 
 ## Query cap
 
-A content word is a token of letters, digits, `+`, `#`, `.`, `_`, and `-`, lowercased, at least two characters long. Function words are dropped: `a`, `an`, `the`, `for`, `to`, `of`, `and`, `or`, `in`, `on`, `with`, `from`, `by`.
+A content word is a token of letters, digits, `+`, `#`, `.`, `_`, and `-`, lowercased, at least two characters long. Function words are dropped: `a`, `an`, `the`, `for`, `to`, `of`, `and`, `or`, `in`, `on`, `with`, `from`, `by`. Comparison words are dropped too: `free`, `like`, `similar`, `version`, `versions`, `alternative`, `alternatives`, `replacement`, `replacements`, `equivalent`. GitHub requires every remaining word, so those words hide projects that describe the job instead of calling themselves an alternative.
 
 The script sends the four longest content words, breaking length ties by original order, then emitting the chosen words in original order. If that call returns `total_count` 0 and the phrase had more than four content words, it sends one shorter query of the three longest words and records both URLs. A zero from the long query alone is not an empty search.
 
