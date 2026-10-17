@@ -15,7 +15,7 @@ API = "https://api.github.com/search/repositories"
 PAGE = 10
 HEADERS = {
     "Accept": "application/vnd.github+json",
-    "User-Agent": "which-repo",
+    "User-Agent": "find-github-repos",
     "X-GitHub-Api-Version": "2026-03-10",
 }
 ALLOWED = frozenset("abcdefghijklmnopqrstuvwxyz0123456789+#._-")

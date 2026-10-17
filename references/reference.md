@@ -9,7 +9,7 @@ The script prints one JSON object and writes nothing. Run it from the directory 
 Headers:
 
 - `Accept: application/vnd.github+json`
-- `User-Agent: which-repo`
+- `User-Agent: find-github-repos`
 - `X-GitHub-Api-Version: 2026-03-10`
 
 The request carries no other headers. One page only: `sort=stars`, `order=desc`, `per_page=10`.

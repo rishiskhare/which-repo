@@ -1,15 +1,15 @@
 ---
-name: which-repo
+name: find-github-repos
 description: Finds live GitHub repositories for a use case. Use when the user asks which repo, which library, or which open-source project to use. Skip it when the user wants code written, a bug fixed, or an implementation done and has not asked which project to use.
 license: MIT
 compatibility: Requires Python 3 and HTTPS access to api.github.com. Uses only the Python standard library.
 metadata:
   author: rishiskhare
   version: "1.0"
-  repository: "https://github.com/rishiskhare/which-repo"
+  repository: "https://github.com/rishiskhare/find-github-repos"
 ---
 
-# which-repo
+# find-github-repos
 
 Find live GitHub repositories for a use case. Run the script. Judge fit from the names and descriptions it returns.
 

@@ -1,11 +1,11 @@
-# which-repo
+# find-github-repos
 
 Finds live GitHub repositories for a use case.
 
 ## Install
 
 ```bash
-npx skills add rishiskhare/which-repo
+npx skills add rishiskhare/find-github-repos
 ```
 
 ## What it does

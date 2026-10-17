@@ -8,7 +8,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
-SPEC = importlib.util.spec_from_file_location("which_repo_search", ROOT / "scripts" / "search.py")
+SPEC = importlib.util.spec_from_file_location("find_github_repos_search", ROOT / "scripts" / "search.py")
 search = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(search)
 
